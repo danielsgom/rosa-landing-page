@@ -23,7 +23,7 @@ info() { echo -e "${CYAN}[info]${NC} $*"; }
 # ── Comandos secundarios ──────────────────────────────────────────────────────
 if [[ "${1:-}" == "stop" ]]; then
   log "Deteniendo procesos PM2 de Rosa..."
-  npx pm2 delete "${APP_NAME}-api" "${APP_NAME}-static" 2>/dev/null || true
+  pm2 delete "${APP_NAME}-api" 2>/dev/null || true
   log "Detenido."
   exit 0
 fi
@@ -67,21 +67,17 @@ NODE_ENV=production npx vite build \
 log "Bundle listo en ./$BUILD_DIR ($(du -sh "$BUILD_DIR" | cut -f1))"
 
 # ── 5. serve para archivos estáticos ─────────────────────────────────────────
-if ! command -v serve &>/dev/null; then
-  warn "'serve' no encontrado, instalando globalmente..."
-  npm install -g serve --silent
-fi
+# nginx sirve el dist/ directamente — no necesitamos un proceso Node para esto
 
 # ── 6. Detener instancias previas ─────────────────────────────────────────────
 log "Deteniendo instancias anteriores (si las hay)..."
-pm2 delete "${APP_NAME}-api" "${APP_NAME}-static" 2>/dev/null || true
+pm2 delete "${APP_NAME}-api" 2>/dev/null || true
 
 # Liberar puertos con fuser (Ubuntu) o lsof (macOS)
 if command -v fuser &>/dev/null; then
   fuser -k "${API_PORT}/tcp" 2>/dev/null || true
-  fuser -k "${STATIC_PORT}/tcp" 2>/dev/null || true
 elif command -v lsof &>/dev/null; then
-  lsof -ti tcp:"$API_PORT","$STATIC_PORT" 2>/dev/null | xargs kill -9 2>/dev/null || true
+  lsof -ti tcp:"$API_PORT" 2>/dev/null | xargs kill -9 2>/dev/null || true
 fi
 
 # ── 7. Arrancar API con PM2 ───────────────────────────────────────────────────
@@ -91,35 +87,19 @@ pm2 start server.dev.js \
   --node-args "--env-file=${ENV_FILE}" \
   --env NODE_ENV=production \
   --max-memory-restart 200M \
-  --restart-delay 3000 \
-  --log /var/log/rosa-api.log 2>/dev/null \
-  || \
-pm2 start server.dev.js \
-  --name "${APP_NAME}-api" \
-  --node-args "--env-file=${ENV_FILE}" \
-  --env NODE_ENV=production \
-  --max-memory-restart 200M \
   --restart-delay 3000
 
-# ── 8. Arrancar frontend estático con PM2 ────────────────────────────────────
-log "Sirviendo frontend estático (PM2 + serve)..."
-pm2 start "serve $BUILD_DIR --listen $STATIC_PORT --single --cors" \
-  --name "${APP_NAME}-static" \
-  --interpreter bash \
-  --restart-delay 3000
-
-# ── 9. Guardar estado PM2 (auto-start al reiniciar el VPS) ───────────────────
+# ── 8. Guardar estado PM2 ────────────────────────────────────────────────────
 pm2 save
-pm2 startup 2>/dev/null | grep -v "^\[PM2\]" | tail -1 | bash 2>/dev/null || true
 
-# ── 10. Estado final ──────────────────────────────────────────────────────────
+# ── 9. Estado final ───────────────────────────────────────────────────────────
 echo ""
 log "✅ Rosa XOXO en producción"
-info "   Frontend → http://localhost:$STATIC_PORT"
 info "   API      → http://localhost:$API_PORT"
+info "   Frontend → nginx sirve dist/ directamente"
 info ""
-info "   Si usas nginx como proxy inverso, apunta el dominio a :$STATIC_PORT"
-info "   y /api/* a :$API_PORT"
+info "   Asegúrate de que /etc/nginx/sites-available/rosasabiabot"
+info "   apunta el root al directorio dist/ (ver instrucciones)"
 info ""
 info "   Comandos útiles:"
 info "     ./start.prod.sh logs   → ver logs"
