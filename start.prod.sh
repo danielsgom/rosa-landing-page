@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # ─────────────────────────────────────────────────────────────────────────────
-#  Rosa XOXO — Producción local optimizada
-#  Uso: ./start.prod.sh
-#  Requisitos: node >=20, npm, puerto 3001 y 4173 libres
+#  Rosa XOXO — Producción en Ubuntu VPS
+#  Uso:   ./start.prod.sh          → levantar / actualizar
+#         ./start.prod.sh stop     → detener todo
+#         ./start.prod.sh logs     → ver logs en tiempo real
+#  Requisitos: node >=20, npm, pm2 (se instala automáticamente)
 # ─────────────────────────────────────────────────────────────────────────────
 set -euo pipefail
 
@@ -10,67 +12,118 @@ ENV_FILE=".env.local"
 API_PORT=3001
 STATIC_PORT=4173
 BUILD_DIR="dist"
+APP_NAME="rosa"
 
-RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
-
-log()  { echo -e "${GREEN}[prod]${NC} $*"; }
+RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
+log()  { echo -e "${GREEN}[rosa]${NC} $*"; }
 warn() { echo -e "${YELLOW}[warn]${NC} $*"; }
 err()  { echo -e "${RED}[error]${NC} $*"; exit 1; }
+info() { echo -e "${CYAN}[info]${NC} $*"; }
 
-# ── 1. Env ────────────────────────────────────────────────────────────────────
-[[ -f "$ENV_FILE" ]] || err "Falta $ENV_FILE. Cópialo de .env.example y rellénalo."
-export $(grep -v '^#' "$ENV_FILE" | grep -v '^$' | xargs)
+# ── Comandos secundarios ──────────────────────────────────────────────────────
+if [[ "${1:-}" == "stop" ]]; then
+  log "Deteniendo procesos PM2 de Rosa..."
+  npx pm2 delete "${APP_NAME}-api" "${APP_NAME}-static" 2>/dev/null || true
+  log "Detenido."
+  exit 0
+fi
 
-[[ -z "${STRIPE_SECRET_KEY:-}" ]]    && err "STRIPE_SECRET_KEY no definida en $ENV_FILE"
+if [[ "${1:-}" == "logs" ]]; then
+  npx pm2 logs --lines 100
+  exit 0
+fi
+
+# ── 1. Requisitos ─────────────────────────────────────────────────────────────
+NODE_VER=$(node -e "process.stdout.write(process.versions.node.split('.')[0])" 2>/dev/null || echo "0")
+(( NODE_VER >= 20 )) || err "Se requiere Node.js >= 20. Versión actual: $(node -v). Instala con: curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt install -y nodejs"
+
+[[ -f "$ENV_FILE" ]] || err "Falta $ENV_FILE. Cópialo de .env.example y rellena tus claves de Stripe."
+
+# Cargar variables (compatible Ubuntu + macOS)
+set -o allexport
+# shellcheck disable=SC1090
+source "$ENV_FILE"
+set +o allexport
+
+[[ -z "${STRIPE_SECRET_KEY:-}" ]]     && err "STRIPE_SECRET_KEY no definida en $ENV_FILE"
 [[ -z "${STRIPE_WEBHOOK_SECRET:-}" ]] && err "STRIPE_WEBHOOK_SECRET no definida en $ENV_FILE"
-[[ -z "${STRIPE_PRICE_MONTHLY:-}" ]] && err "STRIPE_PRICE_MONTHLY no definida en $ENV_FILE"
-[[ -z "${STRIPE_PRICE_ANNUAL:-}" ]]  && err "STRIPE_PRICE_ANNUAL no definida en $ENV_FILE"
+[[ -z "${STRIPE_PRICE_MONTHLY:-}" ]]  && err "STRIPE_PRICE_MONTHLY no definida en $ENV_FILE"
+[[ -z "${STRIPE_PRICE_ANNUAL:-}" ]]   && err "STRIPE_PRICE_ANNUAL no definida en $ENV_FILE"
 
-# ── 2. Liberar puertos ────────────────────────────────────────────────────────
-log "Liberando puertos $API_PORT y $STATIC_PORT..."
-lsof -ti tcp:$API_PORT,$STATIC_PORT 2>/dev/null | xargs kill -9 2>/dev/null || true
+# ── 2. Instalar dependencias de producción ────────────────────────────────────
+log "Instalando dependencias..."
+npm ci --omit=dev --silent
 
-# ── 3. Build ──────────────────────────────────────────────────────────────────
-log "Compilando app (producción)..."
+# ── 3. PM2 ───────────────────────────────────────────────────────────────────
+if ! command -v pm2 &>/dev/null; then
+  warn "PM2 no encontrado, instalando globalmente..."
+  npm install -g pm2 --silent
+fi
+
+# ── 4. Build optimizado ───────────────────────────────────────────────────────
+log "Compilando para producción..."
 NODE_ENV=production npx vite build \
   --minify esbuild \
   --logLevel warn
+log "Bundle listo en ./$BUILD_DIR ($(du -sh "$BUILD_DIR" | cut -f1))"
 
-log "Bundle generado en ./$BUILD_DIR"
-
-# ── 4. API server ─────────────────────────────────────────────────────────────
-log "Arrancando API en puerto $API_PORT..."
-NODE_ENV=production node --env-file="$ENV_FILE" server.dev.js > /tmp/rosa-api.log 2>&1 &
-API_PID=$!
-
-# Esperar a que la API esté lista (máx 5 s)
-for i in {1..10}; do
-  curl -sf "http://localhost:$API_PORT/health" >/dev/null 2>&1 && break
-  sleep 0.5
-done
-
-# ── 5. Static file server ─────────────────────────────────────────────────────
-# Instalar 'serve' si no está disponible
+# ── 5. serve para archivos estáticos ─────────────────────────────────────────
 if ! command -v serve &>/dev/null; then
   warn "'serve' no encontrado, instalando globalmente..."
   npm install -g serve --silent
 fi
 
-log "Sirviendo frontend en http://localhost:$STATIC_PORT"
-log "API en http://localhost:$API_PORT"
-log ""
-log "Pulsa Ctrl+C para detener."
+# ── 6. Detener instancias previas ─────────────────────────────────────────────
+log "Deteniendo instancias anteriores (si las hay)..."
+pm2 delete "${APP_NAME}-api" "${APP_NAME}-static" 2>/dev/null || true
 
-# Servir con caché de activos (1 año para hashed assets, no-cache para index.html)
-serve "$BUILD_DIR" \
-  --listen $STATIC_PORT \
-  --no-clipboard \
-  --single \
-  --cors \
-  --config '{"headers":[{"source":"/**/*.@(js|css|jpg|jpeg|png|svg|woff2)","headers":[{"key":"Cache-Control","value":"public, max-age=31536000, immutable"}]},{"source":"/index.html","headers":[{"key":"Cache-Control","value":"no-cache, no-store, must-revalidate"}]}]}' &
-STATIC_PID=$!
+# Liberar puertos con fuser (Ubuntu) o lsof (macOS)
+if command -v fuser &>/dev/null; then
+  fuser -k "${API_PORT}/tcp" 2>/dev/null || true
+  fuser -k "${STATIC_PORT}/tcp" 2>/dev/null || true
+elif command -v lsof &>/dev/null; then
+  lsof -ti tcp:"$API_PORT","$STATIC_PORT" 2>/dev/null | xargs kill -9 2>/dev/null || true
+fi
 
-# ── 6. Cleanup ────────────────────────────────────────────────────────────────
-trap "log 'Deteniendo...'; kill $API_PID $STATIC_PID 2>/dev/null; exit 0" INT TERM
+# ── 7. Arrancar API con PM2 ───────────────────────────────────────────────────
+log "Arrancando API (PM2)..."
+pm2 start server.dev.js \
+  --name "${APP_NAME}-api" \
+  --node-args "--env-file=${ENV_FILE}" \
+  --env NODE_ENV=production \
+  --max-memory-restart 200M \
+  --restart-delay 3000 \
+  --log /var/log/rosa-api.log 2>/dev/null \
+  || \
+pm2 start server.dev.js \
+  --name "${APP_NAME}-api" \
+  --node-args "--env-file=${ENV_FILE}" \
+  --env NODE_ENV=production \
+  --max-memory-restart 200M \
+  --restart-delay 3000
 
-wait $STATIC_PID
+# ── 8. Arrancar frontend estático con PM2 ────────────────────────────────────
+log "Sirviendo frontend estático (PM2 + serve)..."
+pm2 start "serve $BUILD_DIR --listen $STATIC_PORT --single --cors" \
+  --name "${APP_NAME}-static" \
+  --interpreter bash \
+  --restart-delay 3000
+
+# ── 9. Guardar estado PM2 (auto-start al reiniciar el VPS) ───────────────────
+pm2 save
+pm2 startup 2>/dev/null | grep -v "^\[PM2\]" | tail -1 | bash 2>/dev/null || true
+
+# ── 10. Estado final ──────────────────────────────────────────────────────────
+echo ""
+log "✅ Rosa XOXO en producción"
+info "   Frontend → http://localhost:$STATIC_PORT"
+info "   API      → http://localhost:$API_PORT"
+info ""
+info "   Si usas nginx como proxy inverso, apunta el dominio a :$STATIC_PORT"
+info "   y /api/* a :$API_PORT"
+info ""
+info "   Comandos útiles:"
+info "     ./start.prod.sh logs   → ver logs"
+info "     ./start.prod.sh stop   → detener"
+info "     pm2 monit              → monitor en tiempo real"
+
