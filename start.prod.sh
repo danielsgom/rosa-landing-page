@@ -63,7 +63,6 @@ fi
 # ── 4. Build optimizado ───────────────────────────────────────────────────────
 log "Compilando para producción..."
 NODE_ENV=production npx vite build \
-  --minify esbuild \
   --logLevel warn
 log "Bundle listo en ./$BUILD_DIR ($(du -sh "$BUILD_DIR" | cut -f1))"
 
