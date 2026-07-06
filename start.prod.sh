@@ -50,9 +50,9 @@ set +o allexport
 [[ -z "${STRIPE_PRICE_MONTHLY:-}" ]]  && err "STRIPE_PRICE_MONTHLY no definida en $ENV_FILE"
 [[ -z "${STRIPE_PRICE_ANNUAL:-}" ]]   && err "STRIPE_PRICE_ANNUAL no definida en $ENV_FILE"
 
-# ── 2. Instalar dependencias de producción ────────────────────────────────────
+# ── 2. Instalar dependencias (todas, necesarias para el build) ────────────────
 log "Instalando dependencias..."
-npm ci --omit=dev --silent
+npm ci
 
 # ── 3. PM2 ───────────────────────────────────────────────────────────────────
 if ! command -v pm2 &>/dev/null; then
