@@ -42,13 +42,18 @@ export default function LegalModal({ onAccept, onClose }) {
             </div>
 
             <div>
+              <h3 className="font-semibold text-white mb-1">🤖 Contenido Sintético e IA</h3>
+              <p>Todo el contenido visual es sintético y ha sido generado o modificado mediante inteligencia artificial: «Rosa XOXO» es una identidad digital de ficción. Además, las conversaciones de Telegram pueden ser gestionadas por un agente de inteligencia artificial, y no necesariamente por una persona física en tiempo real.</p>
+            </div>
+
+            <div>
               <h3 className="font-semibold text-white mb-1">📋 Condiciones de Suscripción</h3>
               <p>La suscripción mensual se renueva automáticamente cada 30 días. La suscripción anual se renueva cada 365 días. Puedes cancelar en cualquier momento desde tu panel de Stripe y no se realizarán más cargos, pero no hay reembolso del período en curso.</p>
             </div>
 
             <div>
               <h3 className="font-semibold text-white mb-1">🔒 Privacidad y Datos</h3>
-              <p>Los datos de pago son gestionados exclusivamente por Stripe, Inc. No almacenamos información de tu tarjeta. Tu email puede ser usado para gestión de la suscripción y nunca será cedido a terceros.</p>
+              <p>Todos los datos recogidos son datos personales, tratados conforme al RGPD y la LOPDGDD. Los datos de pago son gestionados exclusivamente por Stripe, Inc. (no almacenamos tu tarjeta) y nunca cedemos tus datos a terceros salvo obligación legal.</p>
             </div>
 
             <div>
@@ -86,7 +91,7 @@ export default function LegalModal({ onAccept, onClose }) {
               <a href="/legal" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#c88596' }} onClick={e => e.stopPropagation()}>
                 bases legales
               </a>
-              , incluyendo la política de privacidad, la renovación automática y la política de no reembolso.
+              , incluyendo la política de privacidad (RGPD/LOPDGDD), la renovación automática, la política de no reembolso, y que el contenido es sintético/generado por IA y las conversaciones pueden ser gestionadas por un agente de inteligencia artificial.
             </span>
           </label>
         </div>

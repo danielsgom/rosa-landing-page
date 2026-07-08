@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-const STORAGE_KEY = 'rosa_legal_v1'
+const STORAGE_KEY = 'rosa_legal_v2'
 
 export function useLegalAcceptance() {
   const [accepted, setAccepted] = useState(() => {

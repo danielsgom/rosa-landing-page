@@ -23,10 +23,13 @@ export default function Legal() {
           <section>
             <h2 className="font-semibold text-white text-base mb-2">1. Objeto del Servicio</h2>
             <p className="leading-relaxed">
-              Rosa XOXO es un servicio de suscripción de contenido digital adulto de carácter exclusivo. Comprende el acceso a un canal privado de Telegram con fotos, vídeos y contenido íntimo, así como, en el plan anual, chats personalizados escritos de carácter explícito mediante cita previa (máx. 2 al mes).
+              Rosa XOXO es un servicio de suscripción de contenido digital adulto de carácter exclusivo y de entretenimiento. Comprende el acceso a un canal privado de Telegram con fotos, vídeos y contenido íntimo, así como, en el plan anual, chats personalizados escritos de carácter explícito mediante cita previa (máx. 2 al mes).
             </p>
             <p className="leading-relaxed mt-2">
               El servicio es íntegramente digital y por texto escrito. No incluye llamadas de voz, videollamadas, mensajes de audio, encuentros presenciales ni contacto físico de ningún tipo.
+            </p>
+            <p className="leading-relaxed mt-2">
+              El usuario reconoce que tanto el contenido visual como las conversaciones descritas en las presentes bases tienen naturaleza sintética y automatizada, en los términos detallados en las cláusulas 3 y 4.
             </p>
           </section>
 
@@ -38,14 +41,33 @@ export default function Legal() {
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">3. Modelo y Contenido</h2>
+            <h2 className="font-semibold text-white text-base mb-2">3. Naturaleza Sintética del Contenido e Inteligencia Artificial</h2>
             <p className="leading-relaxed">
-              El personaje Rosa XOXO, así como las imágenes, vídeos y material visual asociados al servicio, pueden haber sido creados o modificados total o parcialmente mediante inteligencia artificial u otras herramientas digitales de generación de contenido. El usuario reconoce y acepta este hecho antes de completar su suscripción.
+              El usuario reconoce y acepta expresamente que «Rosa XOXO» es una <strong className="text-white">identidad digital de ficción</strong> y que la totalidad del contenido visual del servicio —fotografías, vídeos, imágenes y cualquier otro material gráfico— es <strong className="text-white">contenido sintético</strong> generado, recreado o modificado, total o parcialmente, mediante sistemas de inteligencia artificial y otras herramientas digitales de generación de contenido.
+            </p>
+            <p className="leading-relaxed mt-2">
+              En consecuencia, dicho contenido <strong className="text-white">no se corresponde necesariamente con una persona física real</strong> ni con hechos, lugares o situaciones reales. Cualquier parecido con personas reales es mera coincidencia o resultado del propio proceso de generación.
+            </p>
+            <p className="leading-relaxed mt-2">
+              Esta naturaleza sintética forma parte esencial de la propuesta de valor del servicio. El usuario declara conocerla y aceptarla antes de completar su suscripción, no pudiendo alegar error, desconocimiento o falta de información al respecto, ni reclamar por el hecho de que el contenido haya sido generado mediante inteligencia artificial.
             </p>
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">4. Planes, Precios y Renovación</h2>
+            <h2 className="font-semibold text-white text-base mb-2">4. Agente de Inteligencia Artificial en las Conversaciones</h2>
+            <p className="leading-relaxed">
+              El usuario reconoce y acepta que las conversaciones, mensajes y chats mantenidos a través de Telegram —incluidos los chats personalizados del Plan Anual— pueden ser gestionados, asistidos o respondidos, total o parcialmente, por un <strong className="text-white">agente conversacional de inteligencia artificial</strong>, y no necesariamente por una persona física en tiempo real.
+            </p>
+            <p className="leading-relaxed mt-2">
+              Dicho agente de IA está diseñado para mantener la coherencia del personaje «Rosa XOXO» y generar contenido conversacional de carácter adulto por texto escrito, con fines <strong className="text-white">exclusivamente recreativos y de entretenimiento para adultos</strong>. Las respuestas se generan de forma automatizada, pueden no ser exactas o coherentes y no constituyen asesoramiento profesional, psicológico, médico ni de ningún otro tipo.
+            </p>
+            <p className="leading-relaxed mt-2">
+              En cumplimiento del principio de transparencia establecido en el artículo 50 del Reglamento (UE) 2024/1689 (Reglamento de Inteligencia Artificial), el titular informa de forma clara y previa de que el usuario interactúa con un sistema de inteligencia artificial. Al suscribirte, aceptas expresamente interactuar con dicho sistema.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-semibold text-white text-base mb-2">5. Planes, Precios y Renovación</h2>
             <ul className="space-y-2 list-disc pl-5">
               <li><strong className="text-white">Plan Mensual (3,50 €/mes):</strong> acceso al canal privado. Renovación automática cada 30 días.</li>
               <li><strong className="text-white">Plan Anual (30 €/año):</strong> incluye lo anterior más chats personalizados escritos con cita previa (máx. 2/mes). Renovación automática cada 365 días.</li>
@@ -55,9 +77,10 @@ export default function Legal() {
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">5. Chats Personalizados (Plan Anual)</h2>
+            <h2 className="font-semibold text-white text-base mb-2">6. Chats Personalizados (Plan Anual)</h2>
             <ul className="space-y-2 list-disc pl-5">
               <li>Exclusivamente por chat escrito en Telegram.</li>
+              <li>Pueden ser generados o asistidos por el agente de inteligencia artificial descrito en la cláusula 4.</li>
               <li>Requieren solicitud previa con al menos 24 h de antelación.</li>
               <li>Máximo 2 citas al mes. No acumulables ni transferibles.</li>
               <li>El titular puede finalizar la sesión ante conductas irrespetuosas.</li>
@@ -66,7 +89,7 @@ export default function Legal() {
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">6. Límites del Servicio</h2>
+            <h2 className="font-semibold text-white text-base mb-2">7. Límites del Servicio</h2>
             <p className="leading-relaxed mb-2">El servicio Rosa XOXO <strong className="text-white">no incluye</strong>:</p>
             <ul className="space-y-1.5 list-disc pl-5">
               <li>Llamadas de voz.</li>
@@ -80,7 +103,7 @@ export default function Legal() {
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">7. Cancelación y No Reembolso</h2>
+            <h2 className="font-semibold text-white text-base mb-2">8. Cancelación y No Reembolso</h2>
             <ul className="space-y-2 list-disc pl-5">
               <li>Puedes cancelar en cualquier momento desde el portal de Stripe.</li>
               <li>La suscripción permanece activa hasta el fin del período ya abonado.</li>
@@ -90,7 +113,7 @@ export default function Legal() {
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">8. Prohibiciones del Usuario</h2>
+            <h2 className="font-semibold text-white text-base mb-2">9. Prohibiciones del Usuario</h2>
             <ul className="space-y-1.5 list-disc pl-5">
               <li>Reproducir, distribuir o compartir cualquier contenido del servicio sin consentimiento escrito del titular.</li>
               <li>Capturar o grabar conversaciones privadas para su difusión.</li>
@@ -102,27 +125,38 @@ export default function Legal() {
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">9. Propiedad Intelectual</h2>
+            <h2 className="font-semibold text-white text-base mb-2">10. Propiedad Intelectual</h2>
             <p className="leading-relaxed">
-              Todo el contenido de Rosa XOXO es propiedad exclusiva del titular o cuenta con las licencias correspondientes. Los chats personalizados son estrictamente privados y confidenciales para ambas partes.
+              Todo el contenido de Rosa XOXO —incluido el contenido sintético generado mediante inteligencia artificial— es propiedad exclusiva del titular o cuenta con las licencias correspondientes. El usuario no adquiere ningún derecho de propiedad intelectual sobre el contenido, limitándose su uso al disfrute personal, privado e intransferible durante la vigencia de la suscripción.
+            </p>
+            <p className="leading-relaxed mt-2">
+              Los chats personalizados y las conversaciones con el agente de IA son estrictamente privados y confidenciales para ambas partes.
             </p>
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">10. Protección de Datos (RGPD)</h2>
+            <h2 className="font-semibold text-white text-base mb-2">11. Protección de Datos (RGPD y LOPDGDD)</h2>
+            <p className="leading-relaxed mb-2">
+              <strong className="text-white">Todos los datos recogidos</strong> a través del servicio tienen la consideración de datos de carácter personal y son tratados con plena sujeción y compromiso al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
+            </p>
             <ul className="space-y-2 list-disc pl-5">
               <li><strong className="text-white">Responsable:</strong> Daniel Santiago Gómez — rosa.only.1989@gmail.com</li>
-              <li><strong className="text-white">Datos tratados:</strong> email y datos de facturación facilitados a Stripe.</li>
-              <li><strong className="text-white">Finalidad:</strong> gestión de la suscripción y comunicaciones del servicio.</li>
+              <li><strong className="text-white">Datos tratados:</strong> email, datos de facturación facilitados a Stripe y el contenido de las conversaciones mantenidas en Telegram.</li>
+              <li><strong className="text-white">Finalidad:</strong> gestión de la suscripción, prestación y mejora del servicio y comunicaciones relacionadas.</li>
+              <li><strong className="text-white">Base jurídica:</strong> la ejecución del contrato de suscripción (art. 6.1.b RGPD) y tu consentimiento explícito (arts. 6.1.a y 9.2.a RGPD) para el tratamiento de datos relativos a la vida sexual, considerados categoría especial.</li>
+              <li><strong className="text-white">Conversaciones con IA:</strong> los mensajes intercambiados con el agente de inteligencia artificial constituyen datos personales y pueden ser procesados y conservados de forma confidencial para prestar y mejorar el servicio.</li>
               <li><strong className="text-white">Encargados:</strong> Stripe, Inc. (PCI-DSS) y Telegram Messenger. Ningún dato de tarjeta es almacenado por Rosa XOXO.</li>
-              <li><strong className="text-white">Cesión:</strong> no se ceden datos salvo obligación legal.</li>
-              <li><strong className="text-white">Derechos:</strong> acceso, rectificación, supresión y portabilidad — escribe a <a href="mailto:rosa.only.1989@gmail.com" style={{ color: '#c88596' }}>rosa.only.1989@gmail.com</a>.</li>
+              <li><strong className="text-white">Conservación:</strong> durante la vigencia de la suscripción y los plazos legales aplicables; posteriormente se suprimen o bloquean.</li>
+              <li><strong className="text-white">Medidas de seguridad:</strong> se aplican medidas técnicas y organizativas apropiadas al riesgo del tratamiento.</li>
+              <li><strong className="text-white">Transferencias internacionales:</strong> las realizadas por Stripe y Telegram cuentan con las garantías adecuadas previstas en el RGPD.</li>
+              <li><strong className="text-white">Cesión:</strong> no se ceden datos a terceros salvo obligación legal.</li>
+              <li><strong className="text-white">Derechos:</strong> acceso, rectificación, supresión, oposición, limitación y portabilidad — escribe a <a href="mailto:rosa.only.1989@gmail.com" style={{ color: '#c88596' }}>rosa.only.1989@gmail.com</a>.</li>
               <li><strong className="text-white">Autoridad de control:</strong> <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" style={{ color: '#c88596' }}>AEPD — www.aepd.es</a>.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-semibold text-white text-base mb-2">11. Jurisdicción</h2>
+            <h2 className="font-semibold text-white text-base mb-2">12. Jurisdicción</h2>
             <p className="leading-relaxed">
               Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales competentes del domicilio del consumidor.
             </p>
