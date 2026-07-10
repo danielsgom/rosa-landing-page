@@ -12,11 +12,15 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { plan } = req.body
+  const { plan, locale } = req.body
 
   if (!plan || !PRICE_IDS[plan]) {
-    return res.status(400).json({ error: 'Plan inválido' })
+    return res.status(400).json({ error: 'Invalid plan' })
   }
+
+  // Map app locale to Stripe-supported locale; fall back to 'auto'
+  const STRIPE_LOCALES = ['es','en','pt','it','fr','de']
+  const stripeLocale = STRIPE_LOCALES.includes(locale) ? locale : 'auto'
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `https://${req.headers.host}`
 
@@ -32,7 +36,7 @@ export default async function handler(req, res) {
       success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/cancel`,
       metadata: { plan },
-      locale: 'es',
+      locale: stripeLocale,
       payment_method_types: ['card'],
       subscription_data: {
         metadata: { plan },

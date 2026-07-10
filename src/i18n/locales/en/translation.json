@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "title": "Rosa VIP — Exclusive Content",
+    "description": "Access exclusive VIP content. Join the most intimate and special community."
+  },
+  "common": {
+    "processing": "⏳ Processing...",
+    "popularBadge": "⭐ MOST POPULAR"
+  },
+  "language": {
+    "select": "Select language"
+  },
+  "profile": {
+    "tagline": "🌹 Your most intimate and real connection",
+    "bio": "Here you're not just another subscriber. I want to get to know you, be myself with you and give you what no one else has of me 🌹"
+  },
+  "home": {
+    "intro": "I'm not looking for another fan, I'm looking for that real connection. Close, real and just for you. Come and get to know me… this is only the beginning of our story 🌹",
+    "plansTitle": "Choose how you want to experience me",
+    "plansSubtitle": "Cancel anytime · 100% secure and discreet payment",
+    "trust": {
+      "secure": "Secure payment",
+      "discrete": "Total discretion",
+      "cancel": "Cancel anytime"
+    },
+    "footer": {
+      "age": "For adults over 18 only · Explicit adult content",
+      "legal": "Legal terms & privacy"
+    },
+    "error": "There was an error processing your payment. Please try again."
+  },
+  "plans": {
+    "monthly": {
+      "badge": "MONTHLY",
+      "period": "per month",
+      "tagline": "To start getting to know each other",
+      "benefit1": "My private channel, just for mine",
+      "benefit2": "Intimate photos and videos without censorship",
+      "benefit3": "New content and surprises every week",
+      "benefit4": "My boldest side, unfiltered",
+      "cta": "Start for €3.50/month"
+    },
+    "annual": {
+      "badge": "ANNUAL",
+      "period": "per year",
+      "tagline": "Our most intimate and personal connection",
+      "savings": "Save €12 · less than €3/month",
+      "benefit1": "Everything in the monthly plan, included",
+      "benefit2": "1-on-1 chats with me · completely personal treatment",
+      "benefit3": "2 private sessions per month with me (by appointment)",
+      "benefit4": "Roleplay and sexting in each of our sessions",
+      "benefit5": "Intimate photos made just for you",
+      "benefit6": "We really get to know each other, beyond the content",
+      "cta": "I want to know you deeply",
+      "disclaimer": "Personalised sessions are conducted via written chat and by appointment. They do not include calls, video calls, audio messages or in-person meetings."
+    }
+  },
+  "modal": {
+    "title": "⚖️ Legal Terms",
+    "adult": {
+      "title": "🔞 Adult Content",
+      "text": "This site contains sexually explicit material intended exclusively for people over 18 years of age. By proceeding, you declare under your own responsibility that you are of legal age in your country of residence."
+    },
+    "ai": {
+      "title": "🤖 Synthetic Content & AI",
+      "text": "All visual content is synthetic and has been generated or modified using artificial intelligence: «Rosa XOXO» is a fictional digital identity. Additionally, Telegram conversations may be managed by an artificial intelligence agent, and not necessarily by a real person in real time."
+    },
+    "subscription": {
+      "title": "📋 Subscription Terms",
+      "text": "The monthly subscription automatically renews every 30 days. The annual subscription renews every 365 days. You can cancel at any time from your Stripe dashboard and no further charges will be made, but there is no refund for the current period."
+    },
+    "privacy": {
+      "title": "🔒 Privacy & Data",
+      "text": "All data collected is personal data, processed in accordance with the GDPR. Payment data is managed exclusively by Stripe, Inc. (we do not store your card) and we never share your data with third parties except as required by law."
+    },
+    "refund": {
+      "title": "🚫 No-Refund Policy",
+      "text": "Given the digital and immediate nature of the content, no refunds are made once the content has been accessed or 24 hours have passed since purchase, unless otherwise required by law."
+    },
+    "fullTerms": {
+      "title": "📄 Full Terms",
+      "text": "Read the <legalLink>full legal terms</legalLink> before continuing."
+    },
+    "checkboxLabel": "I confirm that I am over 18 years of age and accept the <legalLink>legal terms</legalLink>, including the privacy policy (GDPR), automatic renewal, the no-refund policy, and that the content is synthetic/AI-generated and conversations may be managed by an artificial intelligence agent.",
+    "cta": "Continue to payment →"
+  },
+  "success": {
+    "title": "Welcome to our world!",
+    "subtitle": "You're inside my world now",
+    "body": "Thank you for taking the step 🌹 This is just the beginning. You have three things waiting for you right now.",
+    "channel": {
+      "title": "Access the private VIP channel",
+      "subtitle": "Your exclusive space with all the intimate content"
+    },
+    "chat": {
+      "title": "Write to me — I have a surprise for you",
+      "subtitle": "Book your personal session and discover what I have planned for you 🌹",
+      "disclaimer": "The session is via written chat, by appointment. It does not include calls, video calls, audio messages or in-person meetings."
+    },
+    "manage": {
+      "title": "Manage my subscription",
+      "subtitle": "Check, pause or cancel anytime"
+    },
+    "footer": "If you have any questions, write to me directly on Telegram. I always answer personally.",
+    "back": "Back to home"
+  },
+  "cancel": {
+    "title": "Not our moment yet",
+    "body": "Don't worry, you haven't been charged anything. I'll be here waiting for you whenever you want to get to know me 🌹",
+    "cta": "🌹 Try again",
+    "help": "If you had any problem with the payment, contact me on Telegram"
+  },
+  "hero": { "alt": "Banner" },
+  "sticky": { "cta": "👑 See VIP plans" }
+}

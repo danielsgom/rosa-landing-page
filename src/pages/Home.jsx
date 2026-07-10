@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import HeroBanner from '../components/HeroBanner.jsx'
 import ProfileCard from '../components/ProfileCard.jsx'
 import PlanCard from '../components/PlanCard.jsx'
 import LegalModal from '../components/LegalModal.jsx'
+import LanguageSelector from '../components/LanguageSelector.jsx'
 import { useLegalAcceptance } from '../hooks/useLegalAcceptance.js'
 
 // ── TUS IMÁGENES ─────────────────────────────────────────────────────────────
@@ -15,6 +17,7 @@ const AVATAR_IMAGE = avatarImage
 
 export default function Home() {
   const { accepted, accept } = useLegalAcceptance()
+  const { t, i18n } = useTranslation()
   const [showModal, setShowModal] = useState(false)
   const [pendingPlan, setPendingPlan] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -54,13 +57,13 @@ export default function Home() {
       const res = await fetch('/api/create-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ plan, locale: i18n.language }),
       })
-      if (!res.ok) throw new Error('Error al crear el pago')
+      if (!res.ok) throw new Error('checkout error')
       const { url } = await res.json()
       window.location.href = url
     } catch (err) {
-      setError('Hubo un error al procesar el pago. Inténtalo de nuevo.')
+      setError(t('home.error'))
       setLoading(false)
     }
   }
@@ -72,6 +75,7 @@ export default function Home() {
   return (
     <div style={{ background: '#0a0807', minHeight: '100vh' }}>
     <div className="min-h-screen pb-8 relative" style={{ background: '#14100f', maxWidth: 480, margin: '0 auto' }}>
+      <LanguageSelector />
       {/* Hero + avatar overlap wrapper */}
       <div className="relative">
         <HeroBanner src={HERO_IMAGE} />
@@ -106,19 +110,17 @@ export default function Home() {
       {/* Who am I */}
       <section className="px-6 py-4 text-center">
         <p className="text-sm leading-relaxed" style={{ color: '#b3a49a', maxWidth: 340, margin: '0 auto' }}>
-          No busco un fan más, busco esa conexión de verdad. 
-          Cercana, real y solo para ti. 
-          Ven a conocerme… esto es solo el principio de lo nuestro 🌹
+          {t('home.intro')}
         </p>
       </section>
 
       {/* Plans section */}
       <section ref={plansRef} className="pt-4 pb-2">
         <h2 className="text-2xl font-bold text-center text-white mb-1 px-4">
-          Elige cómo quieres vivirme
+          {t('home.plansTitle')}
         </h2>
         <p className="text-center text-xs mb-5 px-4" style={{ color: '#8a7c72' }}>
-          Cancela cuando quieras · Pago 100% seguro y discreto
+          {t('home.plansSubtitle')}
         </p>
 
         {/* Annual plan first (featured) */}
@@ -131,13 +133,13 @@ export default function Home() {
       {/* Trust badges */}
       <div className="flex justify-center gap-6 py-5 px-4">
         {[
-          { icon: '🔒', label: 'Pago seguro' },
-          { icon: '🤫', label: 'Total discreción' },
-          { icon: '✅', label: 'Cancela cuando quieras' },
+          { icon: '🔒', key: 'trust.secure' },
+          { icon: '🤫', key: 'trust.discrete' },
+          { icon: '✅', key: 'trust.cancel' },
         ].map((b) => (
-          <div key={b.label} className="flex flex-col items-center gap-1">
+          <div key={b.key} className="flex flex-col items-center gap-1">
             <span className="text-xl">{b.icon}</span>
-            <span className="text-xs text-center" style={{ color: '#8a7c72' }}>{b.label}</span>
+            <span className="text-xs text-center" style={{ color: '#8a7c72' }}>{t(`home.${b.key}`)}</span>
           </div>
         ))}
       </div>
@@ -152,10 +154,10 @@ export default function Home() {
       {/* Footer */}
       <footer className="px-6 py-6 text-center" style={{ borderTop: '1px solid #241c1a' }}>
         <p className="text-xs mb-2" style={{ color: '#6b5d54' }}>
-          Solo para mayores de 18 años · Contenido explícito para adultos
+          {t('home.footer.age')}
         </p>
         <a href="/legal" className="text-xs underline" style={{ color: '#8a7c72' }}>
-          Bases legales y privacidad
+          {t('home.footer.legal')}
         </a>
       </footer>
 

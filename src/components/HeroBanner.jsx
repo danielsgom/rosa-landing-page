@@ -1,11 +1,15 @@
+import { useTranslation } from 'react-i18next'
+
 export default function HeroBanner({ src }) {
+  const { t } = useTranslation()
+  const alt = t('hero.alt')
   return (
     <div className="relative w-full overflow-hidden" style={{ height: '260px' }}>
       {/* Hero image — real photo when src is provided, gradient placeholder otherwise */}
       {src ? (
         <img
           src={src}
-          alt="Banner"
+          alt={alt}
           className="absolute inset-0 w-full h-full object-cover object-top"
           loading="eager"
         />

@@ -1,0 +1,105 @@
+{
+  "title": "Rechtliche Hinweise",
+  "backButton": "← Zurück und abonnieren",
+  "prevails": "Hinweis: Diese Bedingungen unterliegen spanischem Recht. Bei Abweichungen zwischen Sprachversionen ist die spanische Fassung maßgeblich.",
+  "s1": {
+    "title": "1. Leistungsbeschreibung",
+    "p1": "Rosa XOXO ist ein exklusiver Abonnementdienst für digitale Erwachseneninhalte und Unterhaltung. Er umfasst den Zugang zu einem privaten Telegram-Kanal mit Fotos, Videos und intimen Inhalten sowie, im Jahresplan, personalisierte explizite Schrift-Chats nach Vereinbarung (max. 2 pro Monat).",
+    "p2": "Der Dienst ist vollständig digital und textbasiert. Er umfasst keine Sprachanrufe, Videoanrufe, Sprachnachrichten, persönliche Treffen oder körperlichen Kontakt jeglicher Art.",
+    "p3": "Der Nutzer erkennt an, dass sowohl der visuelle Inhalt als auch die in diesen Bedingungen beschriebenen Gespräche synthetischer und automatisierter Natur sind, wie in den Klauseln 3 und 4 beschrieben."
+  },
+  "s2": {
+    "title": "2. Volljährigkeit und Erwachseneninhalt",
+    "p1": "Diese Website enthält sexuell explizites Material, das ausschließlich für Personen über 18 Jahren bestimmt ist. Mit dem Abonnement erklärst du unter deiner Verantwortung, in deinem Wohnsitzland volljährig zu sein. Der Anbieter behält sich das Recht vor, jedes Abonnement bei Hinweisen auf die Nutzung durch Minderjährige zu sperren."
+  },
+  "s3": {
+    "title": "3. Synthetische Natur des Inhalts und Künstliche Intelligenz",
+    "p1": "Der Nutzer erkennt ausdrücklich an und akzeptiert, dass «Rosa XOXO» eine <strong>fiktive digitale Identität</strong> ist und dass der gesamte visuelle Inhalt des Dienstes — Fotos, Videos, Bilder und sonstiges grafisches Material — <strong>synthetischer Inhalt</strong> ist, der ganz oder teilweise mithilfe von KI-Systemen und anderen digitalen Inhaltsgeneratoren erstellt, nachgebildet oder verändert wurde.",
+    "p2": "Daher <strong>entspricht dieser Inhalt nicht notwendigerweise einer realen Person</strong> oder realen Ereignissen, Orten oder Situationen. Jede Ähnlichkeit mit realen Personen ist rein zufällig oder Ergebnis des Generierungsprozesses.",
+    "p3": "Diese synthetische Natur ist ein wesentlicher Bestandteil des Wertangebots des Dienstes. Der Nutzer erklärt, dies vor dem Abschluss seines Abonnements zu kennen und zu akzeptieren, und kann sich nicht auf Irrtum, Unwissenheit oder mangelnde Informationen berufen."
+  },
+  "s4": {
+    "title": "4. Künstliche Intelligenz-Agent in Gesprächen",
+    "p1": "Der Nutzer erkennt an und akzeptiert, dass Gespräche, Nachrichten und Chats über Telegram — einschließlich der personalisierten Chats des Jahresplans — ganz oder teilweise von einem <strong>konversationellen KI-Agenten</strong> verwaltet, unterstützt oder beantwortet werden können, und nicht notwendigerweise von einer echten Person in Echtzeit.",
+    "p2": "Dieser KI-Agent ist darauf ausgelegt, die Konsistenz des Charakters «Rosa XOXO» aufrechtzuerhalten und in schriftlichem Text erwachsene Gesprächsinhalte zu erzeugen, ausschließlich zum <strong>Zweck der Freizeitgestaltung und Unterhaltung für Erwachsene</strong>. Die Antworten werden automatisch generiert, können ungenau oder inkonsistent sein und stellen keinerlei professionelle Beratung dar.",
+    "p3": "In Übereinstimmung mit dem Transparenzgrundsatz gemäß Artikel 50 der Verordnung (EU) 2024/1689 (KI-Verordnung) informiert der Anbieter klar und vorab darüber, dass der Nutzer mit einem KI-System interagiert."
+  },
+  "s5": {
+    "title": "5. Pläne, Preise und Verlängerung",
+    "i1": "<strong>Monatsplan (3,50 €/Monat):</strong> Zugang zum privaten Kanal. Automatische Verlängerung alle 30 Tage.",
+    "i2": "<strong>Jahresplan (30 €/Jahr):</strong> beinhaltet das Obige plus personalisierte Schrift-Chats nach Vereinbarung (max. 2/Monat). Automatische Verlängerung alle 365 Tage.",
+    "i3": "Die Zahlung erfolgt zum Zeitpunkt des Abonnementabschlusses.",
+    "i4": "Der Zugang ist an die Aufrechterhaltung eines aktiven Abonnements geknüpft."
+  },
+  "s6": {
+    "title": "6. Personalisierte Chats (Jahresplan)",
+    "i1": "Ausschließlich per Schrift-Chat auf Telegram.",
+    "i2": "Können vom in Klausel 4 beschriebenen KI-Agenten generiert oder unterstützt werden.",
+    "i3": "Erfordern eine Voranfrage mit mindestens 24 Stunden Vorlauf.",
+    "i4": "Maximal 2 Sitzungen pro Monat. Nicht kumulierbar und nicht übertragbar.",
+    "i5": "Der Anbieter kann die Sitzung bei respektlosem Verhalten beenden.",
+    "i6": "Umfassen keine Anrufe, Videoanrufe, Audios oder illegale Inhalte."
+  },
+  "s7": {
+    "title": "7. Leistungsumfang",
+    "p1": "Der Dienst Rosa XOXO <strong>umfasst nicht</strong>:",
+    "i1": "Sprachanrufe.",
+    "i2": "Videoanrufe oder Live-Streaming.",
+    "i3": "Sprachnachrichten.",
+    "i4": "Persönliche Treffen.",
+    "i5": "Körperlichen Kontakt oder Aktivitäten außerhalb des digitalen Bereichs.",
+    "i6": "Illegale Inhalte oder Inhalte, die Minderjährige involvieren.",
+    "p2": "Jede Anfrage außerhalb dieser Grenzen wird abgelehnt und kann zur sofortigen Kündigung ohne Rückerstattung führen."
+  },
+  "s8": {
+    "title": "8. Kündigung und Keine-Erstattungs-Richtlinie",
+    "i1": "Du kannst jederzeit über das Stripe-Portal kündigen.",
+    "i2": "Das Abonnement bleibt bis zum Ende des bereits bezahlten Zeitraums aktiv.",
+    "i3": "Rückerstattungen werden nicht gewährt, sobald auf den Dienst zugegriffen wurde, gemäß spanischem Verbraucherrecht (Art. 103.m LGDCU).",
+    "i4": "Ausnahmen werden geprüft, wenn der Dienst aus Gründen, die dem Anbieter zuzurechnen sind, nicht erbracht werden konnte."
+  },
+  "s9": {
+    "title": "9. Nutzungsverbote",
+    "i1": "Reproduzieren, Verteilen oder Teilen von Dienstinhalten ohne schriftliche Einwilligung des Anbieters.",
+    "i2": "Aufzeichnen oder Mitschneiden privater Gespräche zur Verbreitung.",
+    "i3": "Belästigung, Bedrohung oder Erpressung des Anbieters.",
+    "i4": "Teilen des Zugangs mit Dritten.",
+    "i5": "Nutzung des Dienstes mit oder in Gegenwart von Minderjährigen.",
+    "p1": "Verstöße können zivilrechtliche und strafrechtliche Haftung sowie eine sofortige Sperrung nach sich ziehen."
+  },
+  "s10": {
+    "title": "10. Geistiges Eigentum",
+    "p1": "Alle Inhalte von Rosa XOXO — einschließlich synthetischer Inhalte, die durch KI generiert wurden — sind ausschließliches Eigentum des Anbieters oder verfügen über entsprechende Lizenzen. Der Nutzer erwirbt keinerlei Rechte des geistigen Eigentums an den Inhalten; die Nutzung beschränkt sich auf den persönlichen, privaten und nicht übertragbaren Genuss für die Dauer des Abonnements.",
+    "p2": "Personalisierte Chats und Gespräche mit dem KI-Agenten sind für beide Parteien streng privat und vertraulich."
+  },
+  "s11": {
+    "title": "11. Datenschutz (DSGVO)",
+    "p1": "<strong>Alle erhobenen Daten</strong> über den Dienst gelten als personenbezogene Daten und werden in vollständiger Übereinstimmung mit der Verordnung (EU) 2016/679 (DSGVO) und dem spanischen Datenschutzrecht (LOPDGDD) verarbeitet.",
+    "i1": "<strong>Verantwortlicher:</strong> Daniel Santiago Gómez — rosa.only.1989@gmail.com",
+    "i2": "<strong>Verarbeitete Daten:</strong> E-Mail, Rechnungsdaten, die Stripe bereitgestellt wurden, und der Inhalt der Telegram-Gespräche.",
+    "i3": "<strong>Zweck:</strong> Abonnementverwaltung, Diensterbringung und -verbesserung sowie zugehörige Kommunikation.",
+    "i4": "<strong>Rechtsgrundlage:</strong> Erfüllung des Abonnementvertrags (Art. 6.1.b DSGVO) und deine ausdrückliche Einwilligung (Art. 6.1.a und 9.2.a DSGVO) für die Verarbeitung von Daten des Sexuallebens, die als besondere Kategorie gelten.",
+    "i5": "<strong>KI-Gespräche:</strong> Nachrichten, die mit dem KI-Agenten ausgetauscht werden, stellen personenbezogene Daten dar und können vertraulich verarbeitet und aufbewahrt werden.",
+    "i6": "<strong>Auftragsverarbeiter:</strong> Stripe, Inc. (PCI-DSS) und Telegram Messenger. Rosa XOXO speichert keine Kartendaten.",
+    "i7": "<strong>Aufbewahrung:</strong> für die Dauer des Abonnements und die geltenden gesetzlichen Fristen; danach gelöscht oder gesperrt.",
+    "i8": "<strong>Sicherheitsmaßnahmen:</strong> dem Verarbeitungsrisiko angemessene technische und organisatorische Maßnahmen werden angewendet.",
+    "i9": "<strong>Internationale Übermittlungen:</strong> die von Stripe und Telegram durchgeführten Übermittlungen verfügen über die in der DSGVO vorgesehenen geeigneten Garantien.",
+    "i10": "<strong>Weitergabe:</strong> Daten werden nicht an Dritte weitergegeben, außer bei gesetzlicher Verpflichtung.",
+    "i11": "<strong>Rechte:</strong> Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung und Portabilität — schreibe an <emailLink>rosa.only.1989@gmail.com</emailLink>.",
+    "i12": "<strong>Aufsichtsbehörde:</strong> <aepdLink>AEPD — www.aepd.es</aepdLink>."
+  },
+  "s12": {
+    "title": "12. Gerichtsstand",
+    "p1": "Diese Bedingungen unterliegen spanischem Recht. Bei Streitigkeiten unterwerfen sich die Parteien den zuständigen Gerichten am Wohnsitz des Verbrauchers."
+  },
+  "titular": {
+    "heading": "Dienstanbieter",
+    "line1": "Daniel Santiago Gómez, in Vertretung der Marke <strong>Rosa XOXO</strong>",
+    "nifLabel": "Steuer-ID (NIF):",
+    "nifValue": "50477973B",
+    "addressLabel": "Steuerlicher Sitz:",
+    "addressValue": "C/ La Granja de San Ildefonso 38, 5.ºA, 28051, Madrid, Spanien",
+    "contactLabel": "Kontakt:",
+    "updated": "Letzte Aktualisierung: Juli 2026."
+  }
+}

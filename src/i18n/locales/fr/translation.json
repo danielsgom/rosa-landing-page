@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "title": "Rosa VIP — Contenu Exclusif",
+    "description": "Accédez à du contenu exclusif VIP. Rejoignez la communauté la plus intime et spéciale."
+  },
+  "common": {
+    "processing": "⏳ Traitement...",
+    "popularBadge": "⭐ LE PLUS POPULAIRE"
+  },
+  "language": {
+    "select": "Choisir la langue"
+  },
+  "profile": {
+    "tagline": "🌹 Ta connexion la plus intime et réelle",
+    "bio": "Ici tu n'es pas juste un abonné de plus. Je veux te connaître, être moi-même avec toi et te donner ce que personne d'autre n'a de moi 🌹"
+  },
+  "home": {
+    "intro": "Je ne cherche pas un fan de plus, je cherche cette vraie connexion. Proche, réelle et rien que pour toi. Viens me connaître… ce n'est que le début de notre histoire 🌹",
+    "plansTitle": "Choisis comment tu veux me vivre",
+    "plansSubtitle": "Annule quand tu veux · Paiement 100% sécurisé et discret",
+    "trust": {
+      "secure": "Paiement sécurisé",
+      "discrete": "Totale discrétion",
+      "cancel": "Annule quand tu veux"
+    },
+    "footer": {
+      "age": "Uniquement pour les adultes de plus de 18 ans · Contenu adulte explicite",
+      "legal": "Mentions légales et confidentialité"
+    },
+    "error": "Une erreur s'est produite lors du traitement du paiement. Réessaie."
+  },
+  "plans": {
+    "monthly": {
+      "badge": "MENSUEL",
+      "period": "par mois",
+      "tagline": "Pour commencer à nous connaître",
+      "benefit1": "Ma chaîne privée, rien que pour les miens",
+      "benefit2": "Photos et vidéos intimes sans censure",
+      "benefit3": "Nouveau contenu et surprises chaque semaine",
+      "benefit4": "Mon côté le plus audacieux, sans filtres",
+      "cta": "Commencer pour 3,50€/mois"
+    },
+    "annual": {
+      "badge": "ANNUEL",
+      "period": "par an",
+      "tagline": "Notre connexion la plus intime et personnelle",
+      "savings": "Économise 12€ · moins de 3€/mois",
+      "benefit1": "Tout du plan mensuel, inclus",
+      "benefit2": "Chats 1 à 1 avec moi · traitement totalement personnel",
+      "benefit3": "2 rendez-vous privés par mois avec moi (sur réservation)",
+      "benefit4": "Roleplay et sexting à chacun de nos rendez-vous",
+      "benefit5": "Photos intimes pensées rien que pour toi",
+      "benefit6": "On se connaît vraiment, au-delà du contenu",
+      "cta": "Je veux te connaître en profondeur",
+      "disclaimer": "Les rendez-vous personnalisés se font par chat écrit et sur réservation. Ils n'incluent pas d'appels, de vidéoconférences, d'audios ni de rencontres en personne."
+    }
+  },
+  "modal": {
+    "title": "⚖️ Mentions Légales",
+    "adult": {
+      "title": "🔞 Contenu Adulte",
+      "text": "Ce site contient du matériel de nature sexuelle explicite destiné exclusivement aux personnes de plus de 18 ans. En continuant, tu déclares sous ta responsabilité être majeur(e) dans ton pays de résidence."
+    },
+    "ai": {
+      "title": "🤖 Contenu Synthétique et IA",
+      "text": "Tout le contenu visuel est synthétique et a été généré ou modifié par intelligence artificielle : «Rosa XOXO» est une identité numérique fictive. De plus, les conversations Telegram peuvent être gérées par un agent d'intelligence artificielle, et pas nécessairement par une personne réelle en temps réel."
+    },
+    "subscription": {
+      "title": "📋 Conditions d'Abonnement",
+      "text": "L'abonnement mensuel se renouvelle automatiquement tous les 30 jours. L'abonnement annuel se renouvelle tous les 365 jours. Tu peux annuler à tout moment depuis ton tableau de bord Stripe et aucun autre prélèvement ne sera effectué, mais aucun remboursement n'est accordé pour la période en cours."
+    },
+    "privacy": {
+      "title": "🔒 Confidentialité et Données",
+      "text": "Toutes les données collectées sont des données personnelles, traitées conformément au RGPD. Les données de paiement sont gérées exclusivement par Stripe, Inc. (nous ne conservons pas ta carte) et nous ne cédons jamais tes données à des tiers sauf obligation légale."
+    },
+    "refund": {
+      "title": "🚫 Politique de Non-Remboursement",
+      "text": "Compte tenu de la nature numérique et immédiate du contenu, aucun remboursement n'est effectué une fois le contenu accédé ou 24h après l'achat, sauf obligation légale contraire."
+    },
+    "fullTerms": {
+      "title": "📄 Conditions Complètes",
+      "text": "Consulte les <legalLink>conditions légales complètes</legalLink> avant de continuer."
+    },
+    "checkboxLabel": "Je confirme avoir plus de 18 ans et j'accepte les <legalLink>conditions légales</legalLink>, y compris la politique de confidentialité (RGPD), le renouvellement automatique, la politique de non-remboursement, et que le contenu est synthétique/généré par IA et que les conversations peuvent être gérées par un agent d'intelligence artificielle.",
+    "cta": "Continuer vers le paiement →"
+  },
+  "success": {
+    "title": "Bienvenue dans notre monde !",
+    "subtitle": "Tu es maintenant dans mon monde",
+    "body": "Merci d'avoir franchi le pas 🌹 Ce n'est que le début. Tu as trois choses qui t'attendent maintenant.",
+    "channel": {
+      "title": "Accéder à la chaîne VIP privée",
+      "subtitle": "Ton espace exclusif avec tout le contenu intime"
+    },
+    "chat": {
+      "title": "Écris-moi — j'ai une surprise pour toi",
+      "subtitle": "Réserve ton rendez-vous personnel et découvre ce que j'ai préparé pour toi 🌹",
+      "disclaimer": "Le rendez-vous est par chat écrit, sur réservation. Il n'inclut pas d'appels, de vidéoconférences, d'audios ni de rencontres en personne."
+    },
+    "manage": {
+      "title": "Gérer mon abonnement",
+      "subtitle": "Consulte, mets en pause ou annule quand tu veux"
+    },
+    "footer": "Si tu as la moindre question, écris-moi directement sur Telegram. Je réponds toujours personnellement.",
+    "back": "Retour à l'accueil"
+  },
+  "cancel": {
+    "title": "Pas encore notre moment",
+    "body": "Pas de souci, rien ne t'a été facturé. Je serai là à t'attendre quand tu voudras qu'on se connaisse 🌹",
+    "cta": "🌹 Réessayer",
+    "help": "Si tu as eu un problème avec le paiement, contacte-moi sur Telegram"
+  },
+  "hero": { "alt": "Bannière" },
+  "sticky": { "cta": "👑 Voir les plans VIP" }
+}

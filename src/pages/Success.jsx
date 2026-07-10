@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import LanguageSelector from '../components/LanguageSelector.jsx'
 
 // ── CONFIGURA ESTOS LINKS ────────────────────────────────────────────────────
 const TELEGRAM_CHANNEL = 'https://t.me/+mIG0yVkeFAVjZmU8'
@@ -9,6 +11,7 @@ const STRIPE_PORTAL    = 'https://billing.stripe.com/p/login/7sYaEP4XUbxYa3pbcC1
 
 export default function Success() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
   const [showConfetti, setShowConfetti] = useState(false)
 
   useEffect(() => {
@@ -20,9 +23,10 @@ export default function Success() {
   return (
     <div style={{ background: '#0a0807', minHeight: '100vh' }}>
     <div
-      className="min-h-screen flex flex-col items-center px-5 py-10 text-center"
+      className="min-h-screen flex flex-col items-center px-5 py-10 text-center relative"
       style={{ background: 'linear-gradient(180deg, #14100f 0%, #1c1613 50%, #14100f 100%)', maxWidth: 480, margin: '0 auto' }}
     >
+      <LanguageSelector />
       {/* Animated petals */}
       {showConfetti && (
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-50">
@@ -64,13 +68,13 @@ export default function Success() {
       </div>
 
       <h1 className="text-3xl font-black text-white mb-2">
-        ¡Bienvenido a lo nuestro!
+        {t('success.title')}
       </h1>
       <p className="text-base font-medium mb-1" style={{ color: '#c88596' }}>
-        Ya estás dentro de mi mundo
+        {t('success.subtitle')}
       </p>
       <p className="text-sm leading-relaxed mb-8" style={{ color: '#b3a49a', maxWidth: 300 }}>
-        Gracias por dar el paso 🌹 Esto es solo el comienzo. Tienes tres cosas esperándote ahora mismo.
+        {t('success.body')}
       </p>
 
       {/* === ACTION CARDS === */}
@@ -91,9 +95,9 @@ export default function Success() {
             📲
           </div>
           <div>
-            <p className="text-sm font-semibold text-white leading-tight mb-0.5">Acceder al canal VIP privado</p>
+            <p className="text-sm font-semibold text-white leading-tight mb-0.5">{t('success.channel.title')}</p>
             <p className="text-xs leading-relaxed" style={{ color: '#8a7c72' }}>
-              Tu espacio exclusivo con todo el contenido íntimo
+              {t('success.channel.subtitle')}
             </p>
           </div>
           <span className="ml-auto text-lg flex-shrink-0" style={{ color: '#c6a15f' }}>›</span>
@@ -114,12 +118,12 @@ export default function Success() {
             💬
           </div>
           <div>
-            <p className="text-sm font-semibold text-white leading-tight mb-0.5">Escríbeme — tengo una sorpresa para ti</p>
+            <p className="text-sm font-semibold text-white leading-tight mb-0.5">{t('success.chat.title')}</p>
             <p className="text-xs leading-relaxed" style={{ color: '#c88596' }}>
-              Reserva tu cita personal y descubre lo que te tengo preparado 🌹
+              {t('success.chat.subtitle')}
             </p>
             <p className="text-xs leading-relaxed mt-1" style={{ color: '#6b5d54' }}>
-              La cita es por chat escrito, con cita previa. No incluye llamadas, videollamadas, audios ni encuentros presenciales.
+              {t('success.chat.disclaimer')}
             </p>
           </div>
           <span className="ml-auto text-lg flex-shrink-0" style={{ color: '#c88596' }}>›</span>
@@ -140,9 +144,9 @@ export default function Success() {
             ⚙️
           </div>
           <div>
-            <p className="text-sm font-semibold text-white leading-tight mb-0.5">Gestionar mi suscripción</p>
+            <p className="text-sm font-semibold text-white leading-tight mb-0.5">{t('success.manage.title')}</p>
             <p className="text-xs leading-relaxed" style={{ color: '#8a7c72' }}>
-              Consulta, pausa o cancela cuando quieras
+              {t('success.manage.subtitle')}
             </p>
           </div>
           <span className="ml-auto text-lg flex-shrink-0" style={{ color: '#6b5d54' }}>›</span>
@@ -150,7 +154,7 @@ export default function Success() {
       </div>
 
       <p className="text-xs mb-8" style={{ color: '#6b5d54', maxWidth: 280 }}>
-        Si tienes cualquier duda, escríbeme directamente por Telegram. Siempre te respondo yo.
+        {t('success.footer')}
       </p>
 
       <button
@@ -158,7 +162,7 @@ export default function Success() {
         className="text-xs underline"
         style={{ color: '#6b5d54', background: 'none', border: 'none', cursor: 'pointer' }}
       >
-        Volver al inicio
+        {t('success.back')}
       </button>
     </div>
     </div>

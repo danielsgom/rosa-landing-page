@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+
 export default function StickyFooterCTA({ onSelect, loading }) {
+  const { t } = useTranslation()
+
   return (
     <div
       className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-6 pt-3"
@@ -12,7 +16,7 @@ export default function StickyFooterCTA({ onSelect, loading }) {
         disabled={loading}
         style={{ background: 'linear-gradient(135deg, #c6a15f, #e2c281)', color: '#14100f', maxWidth: 400, margin: '0 auto' }}
       >
-        {loading ? '⏳ Procesando...' : '👑 Ver planes VIP'}
+        {loading ? t('common.processing') : t('sticky.cta')}
       </button>
     </div>
   )
