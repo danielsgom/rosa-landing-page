@@ -34,7 +34,7 @@
       "badge": "MENSAL",
       "period": "por mês",
       "tagline": "Para começarmos a nos conhecer",
-      "benefit1": "Meu canal privado, só para os meus",
+      "benefit1": "Meu canal privado do Telegram, só para os meus",
       "benefit2": "Fotos e vídeos íntimos sem censura",
       "benefit3": "Conteúdo novo e surpresas toda semana",
       "benefit4": "Meu lado mais ousado, sem filtros",
@@ -46,13 +46,13 @@
       "tagline": "Nossa conexão mais íntima e pessoal",
       "savings": "Economize 12€ · menos de 3€/mês",
       "benefit1": "Tudo do plano mensal, incluído",
-      "benefit2": "Chats 1 a 1 comigo · tratamento totalmente pessoal",
-      "benefit3": "2 encontros privados por mês comigo (com agendamento)",
+      "benefit2": "Chats 1 a 1 comigo pelo Telegram · tratamento totalmente pessoal",
+      "benefit3": "2 encontros privados por mês comigo pelo Telegram (com agendamento)",
       "benefit4": "Roleplay e sexting em cada um dos nossos encontros",
       "benefit5": "Fotos íntimas pensadas só para você",
       "benefit6": "Nos conhecemos de verdade, além do conteúdo",
       "cta": "Quero te conhecer a fundo",
-      "disclaimer": "Os encontros personalizados são realizados por chat escrito e com agendamento prévio. Não incluem ligações, videochamadas, áudios nem encontros presenciais."
+      "disclaimer": "Os encontros personalizados são realizados por chat escrito no Telegram e com agendamento prévio. Não incluem ligações, videochamadas, áudios nem encontros presenciais."
     }
   },
   "modal": {
@@ -89,13 +89,13 @@
     "subtitle": "Você já está dentro do meu mundo",
     "body": "Obrigada por dar esse passo 🌹 Isso é só o começo. Você tem três coisas te esperando agora.",
     "channel": {
-      "title": "Acessar o canal VIP privado",
-      "subtitle": "Seu espaço exclusivo com todo o conteúdo íntimo"
+      "title": "Acessar o canal VIP privado no Telegram",
+      "subtitle": "Seu canal privado do Telegram com todo o conteúdo íntimo"
     },
     "chat": {
-      "title": "Me escreva — tenho uma surpresa para você",
-      "subtitle": "Reserve seu encontro pessoal e descubra o que preparei para você 🌹",
-      "disclaimer": "O encontro é por chat escrito, com agendamento prévio. Não inclui ligações, videochamadas, áudios nem encontros presenciais."
+      "title": "Me escreva no Telegram — tenho uma surpresa para você",
+      "subtitle": "Me escreva diretamente no Telegram e reserve seu encontro pessoal 🌹",
+      "disclaimer": "O encontro é por chat escrito no Telegram, com agendamento prévio. Não inclui ligações, videochamadas, áudios nem encontros presenciais."
     },
     "manage": {
       "title": "Gerenciar minha assinatura",

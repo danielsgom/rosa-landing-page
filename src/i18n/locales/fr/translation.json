@@ -34,7 +34,7 @@
       "badge": "MENSUEL",
       "period": "par mois",
       "tagline": "Pour commencer à nous connaître",
-      "benefit1": "Ma chaîne privée, rien que pour les miens",
+      "benefit1": "Ma chaîne Telegram privée, rien que pour les miens",
       "benefit2": "Photos et vidéos intimes sans censure",
       "benefit3": "Nouveau contenu et surprises chaque semaine",
       "benefit4": "Mon côté le plus audacieux, sans filtres",
@@ -46,13 +46,13 @@
       "tagline": "Notre connexion la plus intime et personnelle",
       "savings": "Économise 12€ · moins de 3€/mois",
       "benefit1": "Tout du plan mensuel, inclus",
-      "benefit2": "Chats 1 à 1 avec moi · traitement totalement personnel",
-      "benefit3": "2 rendez-vous privés par mois avec moi (sur réservation)",
+      "benefit2": "Chats 1 à 1 avec moi sur Telegram · traitement totalement personnel",
+      "benefit3": "2 rendez-vous privés par mois avec moi sur Telegram (sur réservation)",
       "benefit4": "Roleplay et sexting à chacun de nos rendez-vous",
       "benefit5": "Photos intimes pensées rien que pour toi",
       "benefit6": "On se connaît vraiment, au-delà du contenu",
       "cta": "Je veux te connaître en profondeur",
-      "disclaimer": "Les rendez-vous personnalisés se font par chat écrit et sur réservation. Ils n'incluent pas d'appels, de vidéoconférences, d'audios ni de rencontres en personne."
+      "disclaimer": "Les rendez-vous personnalisés se font par chat écrit sur Telegram et sur réservation. Ils n'incluent pas d'appels, de vidéoconférences, d'audios ni de rencontres en personne."
     }
   },
   "modal": {
@@ -89,13 +89,13 @@
     "subtitle": "Tu es maintenant dans mon monde",
     "body": "Merci d'avoir franchi le pas 🌹 Ce n'est que le début. Tu as trois choses qui t'attendent maintenant.",
     "channel": {
-      "title": "Accéder à la chaîne VIP privée",
-      "subtitle": "Ton espace exclusif avec tout le contenu intime"
+      "title": "Accéder à la chaîne VIP privée sur Telegram",
+      "subtitle": "Ta chaîne Telegram privée avec tout le contenu intime"
     },
     "chat": {
-      "title": "Écris-moi — j'ai une surprise pour toi",
-      "subtitle": "Réserve ton rendez-vous personnel et découvre ce que j'ai préparé pour toi 🌹",
-      "disclaimer": "Le rendez-vous est par chat écrit, sur réservation. Il n'inclut pas d'appels, de vidéoconférences, d'audios ni de rencontres en personne."
+      "title": "Écris-moi sur Telegram — j'ai une surprise pour toi",
+      "subtitle": "Contacte-moi directement sur Telegram et réserve ton rendez-vous personnel 🌹",
+      "disclaimer": "Le rendez-vous est par chat écrit sur Telegram, sur réservation. Il n'inclut pas d'appels, de vidéoconférences, d'audios ni de rencontres en personne."
     },
     "manage": {
       "title": "Gérer mon abonnement",

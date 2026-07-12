@@ -34,7 +34,7 @@
       "badge": "MENSUAL",
       "period": "al mes",
       "tagline": "Para empezar a conocernos",
-      "benefit1": "Mi canal privado, solo para los míos",
+      "benefit1": "Mi canal privado de Telegram, solo para los míos",
       "benefit2": "Fotos y vídeos íntimos sin censura",
       "benefit3": "Contenido nuevo y sorpresas cada semana",
       "benefit4": "Mi lado más atrevido, sin filtros",
@@ -46,13 +46,13 @@
       "tagline": "Nuestra conexión más íntima y personal",
       "savings": "Ahorras 12€ · menos de 3€/mes",
       "benefit1": "Todo lo del plan mensual, incluido",
-      "benefit2": "Chats 1 a 1 conmigo · trato totalmente personal",
-      "benefit3": "2 citas privadas al mes conmigo (con cita previa)",
+      "benefit2": "Chats 1 a 1 conmigo por Telegram · trato totalmente personal",
+      "benefit3": "2 citas privadas al mes conmigo por Telegram (con cita previa)",
       "benefit4": "Roleplay y sexting en cada una de nuestras citas",
       "benefit5": "Fotos íntimas pensadas solo para ti",
       "benefit6": "Nos conocemos de verdad, más allá del contenido",
       "cta": "Quiero conocerte a fondo",
-      "disclaimer": "Las citas personalizadas se realizan por chat escrito y con cita previa. No incluyen llamadas, videollamadas, audios ni encuentros presenciales."
+      "disclaimer": "Las citas personalizadas se realizan por chat escrito en Telegram y con cita previa. No incluyen llamadas, videollamadas, audios ni encuentros presenciales."
     }
   },
   "modal": {
@@ -89,13 +89,13 @@
     "subtitle": "Ya estás dentro de mi mundo",
     "body": "Gracias por dar el paso 🌹 Esto es solo el comienzo. Tienes tres cosas esperándote ahora mismo.",
     "channel": {
-      "title": "Acceder al canal VIP privado",
-      "subtitle": "Tu espacio exclusivo con todo el contenido íntimo"
+      "title": "Acceder al canal VIP privado en Telegram",
+      "subtitle": "Tu canal privado de Telegram, con todo el contenido íntimo"
     },
     "chat": {
-      "title": "Escríbeme — tengo una sorpresa para ti",
-      "subtitle": "Reserva tu cita personal y descubre lo que te tengo preparado 🌹",
-      "disclaimer": "La cita es por chat escrito, con cita previa. No incluye llamadas, videollamadas, audios ni encuentros presenciales."
+      "title": "Escríbeme por Telegram — tengo una sorpresa para ti",
+      "subtitle": "Escríbeme directamente en Telegram y reserva tu cita personal 🌹",
+      "disclaimer": "La cita es por chat escrito en Telegram, con cita previa. No incluye llamadas, videollamadas, audios ni encuentros presenciales."
     },
     "manage": {
       "title": "Gestionar mi suscripción",
