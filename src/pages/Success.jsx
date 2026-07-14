@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import LanguageSelector from '../components/LanguageSelector.jsx'
 
 // ── CONFIGURA ESTOS LINKS ────────────────────────────────────────────────────
-const TELEGRAM_CHANNEL = 'https://t.me/+mIG0yVkeFAVjZmU8'
+const TELEGRAM_CHANNEL = 'https://telegram.me/+fxLfTQZBIKNjMDFk'
 const TELEGRAM_DIRECT  = 'https://t.me/rosa_comunidad_vip'
 const STRIPE_PORTAL    = 'https://billing.stripe.com/p/login/7sYaEP4XUbxYa3pbcC1Fe00'
 // ─────────────────────────────────────────────────────────────────────────────
