@@ -7,10 +7,9 @@ export default function PlanCard({ plan, onSelect, loading }) {
     const benefits = [
       { emoji: '✅', text: t('plans.annual.benefit1') },
       { emoji: '💬', text: t('plans.annual.benefit2') },
-      { emoji: '📅', text: t('plans.annual.benefit3') },
-      { emoji: '🎭', text: t('plans.annual.benefit4') },
-      { emoji: '📸', text: t('plans.annual.benefit5') },
-      { emoji: '🌹', text: t('plans.annual.benefit6') },
+      { emoji: '🎭', text: t('plans.annual.benefit3') },
+      { emoji: '📸', text: t('plans.annual.benefit4') },
+      { emoji: '🌹', text: t('plans.annual.benefit5') },
     ]
 
     return (
