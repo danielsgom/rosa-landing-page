@@ -48,11 +48,6 @@ export default function LegalModal({ onAccept, onClose }) {
             </div>
 
             <div>
-              <h3 className="font-semibold text-white mb-1">{t('modal.ai.title')}</h3>
-              <p>{t('modal.ai.text')}</p>
-            </div>
-
-            <div>
               <h3 className="font-semibold text-white mb-1">{t('modal.subscription.title')}</h3>
               <p>{t('modal.subscription.text')}</p>
             </div>

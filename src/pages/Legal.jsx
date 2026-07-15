@@ -9,9 +9,6 @@ export default function Legal() {
   const navigate = useNavigate()
   const { t } = useTranslation('legal')
 
-  const emailLink = (
-    <a href="mailto:rosa.only.1989@gmail.com" style={{ color: '#c88596' }} />
-  )
   const aepdLink = (
     <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" style={{ color: '#c88596' }} />
   )
@@ -47,7 +44,6 @@ export default function Legal() {
             <h2 className="font-semibold text-white text-base mb-2">{t('s1.title')}</h2>
             <p className="leading-relaxed">{t('s1.p1')}</p>
             <p className="leading-relaxed mt-2">{t('s1.p2')}</p>
-            <p className="leading-relaxed mt-2">{t('s1.p3')}</p>
           </section>
 
           <section>
@@ -57,31 +53,37 @@ export default function Legal() {
 
           <section>
             <h2 className="font-semibold text-white text-base mb-2">{t('s3.title')}</h2>
-            <p className="leading-relaxed"><Trans i18nKey="s3.p1" ns="legal" components={{ strong }} /></p>
-            <p className="leading-relaxed mt-2"><Trans i18nKey="s3.p2" ns="legal" components={{ strong }} /></p>
-            <p className="leading-relaxed mt-2">{t('s3.p3')}</p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-white text-base mb-2">{t('s4.title')}</h2>
-            <p className="leading-relaxed"><Trans i18nKey="s4.p1" ns="legal" components={{ strong }} /></p>
-            <p className="leading-relaxed mt-2"><Trans i18nKey="s4.p2" ns="legal" components={{ strong }} /></p>
-            <p className="leading-relaxed mt-2">{t('s4.p3')}</p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-white text-base mb-2">{t('s5.title')}</h2>
             <ul className="space-y-2 list-disc ps-5">
               {['i1','i2','i3','i4'].map((k) => (
-                <li key={k}><Trans i18nKey={`s5.${k}`} ns="legal" components={{ strong }} /></li>
+                <li key={k}><Trans i18nKey={`s3.${k}`} ns="legal" components={{ strong }} /></li>
               ))}
             </ul>
           </section>
 
           <section>
+            <h2 className="font-semibold text-white text-base mb-2">{t('s4.title')}</h2>
+            <ul className="space-y-2 list-disc ps-5">
+              {['i1','i2','i3','i4','i5'].map((k) => (
+                <li key={k}>{t(`s4.${k}`)}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-semibold text-white text-base mb-2">{t('s5.title')}</h2>
+            <p className="leading-relaxed mb-2"><Trans i18nKey="s5.p1" ns="legal" components={{ strong }} /></p>
+            <ul className="space-y-1.5 list-disc ps-5">
+              {['i1','i2','i3','i4','i5','i6'].map((k) => (
+                <li key={k}>{t(`s5.${k}`)}</li>
+              ))}
+            </ul>
+            <p className="leading-relaxed mt-2">{t('s5.p2')}</p>
+          </section>
+
+          <section>
             <h2 className="font-semibold text-white text-base mb-2">{t('s6.title')}</h2>
             <ul className="space-y-2 list-disc ps-5">
-              {['i1','i2','i3','i4','i5','i6'].map((k) => (
+              {['i1','i2','i3','i4'].map((k) => (
                 <li key={k}>{t(`s6.${k}`)}</li>
               ))}
             </ul>
@@ -89,71 +91,34 @@ export default function Legal() {
 
           <section>
             <h2 className="font-semibold text-white text-base mb-2">{t('s7.title')}</h2>
-            <p className="leading-relaxed mb-2"><Trans i18nKey="s7.p1" ns="legal" components={{ strong }} /></p>
             <ul className="space-y-1.5 list-disc ps-5">
-              {['i1','i2','i3','i4','i5','i6'].map((k) => (
+              {['i1','i2','i3','i4','i5'].map((k) => (
                 <li key={k}>{t(`s7.${k}`)}</li>
               ))}
             </ul>
-            <p className="leading-relaxed mt-2">{t('s7.p2')}</p>
+            <p className="leading-relaxed mt-2">{t('s7.p1')}</p>
           </section>
 
           <section>
             <h2 className="font-semibold text-white text-base mb-2">{t('s8.title')}</h2>
-            <ul className="space-y-2 list-disc ps-5">
-              {['i1','i2','i3','i4'].map((k) => (
-                <li key={k}>{t(`s8.${k}`)}</li>
-              ))}
-            </ul>
+            <p className="leading-relaxed">{t('s8.p1')}</p>
+            <p className="leading-relaxed mt-2">{t('s8.p2')}</p>
           </section>
 
           <section>
             <h2 className="font-semibold text-white text-base mb-2">{t('s9.title')}</h2>
-            <ul className="space-y-1.5 list-disc ps-5">
-              {['i1','i2','i3','i4','i5'].map((k) => (
-                <li key={k}>{t(`s9.${k}`)}</li>
+            <p className="leading-relaxed mb-2"><Trans i18nKey="s9.p1" ns="legal" components={{ strong }} /></p>
+            <ul className="space-y-2 list-disc ps-5">
+              {['i1','i2','i3','i4','i5','i6','i7','i8','i9','i10'].map((k) => (
+                <li key={k}><Trans i18nKey={`s9.${k}`} ns="legal" components={{ strong }} /></li>
               ))}
+              <li><Trans i18nKey="s9.i11" ns="legal" components={{ strong, aepdLink }} /></li>
             </ul>
-            <p className="leading-relaxed mt-2">{t('s9.p1')}</p>
           </section>
 
           <section>
             <h2 className="font-semibold text-white text-base mb-2">{t('s10.title')}</h2>
             <p className="leading-relaxed">{t('s10.p1')}</p>
-            <p className="leading-relaxed mt-2">{t('s10.p2')}</p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-white text-base mb-2">{t('s11.title')}</h2>
-            <p className="leading-relaxed mb-2"><Trans i18nKey="s11.p1" ns="legal" components={{ strong }} /></p>
-            <ul className="space-y-2 list-disc ps-5">
-              {['i1','i2','i3','i4','i5','i6','i7','i8','i9','i10'].map((k) => (
-                <li key={k}><Trans i18nKey={`s11.${k}`} ns="legal" components={{ strong }} /></li>
-              ))}
-              <li><Trans i18nKey="s11.i11" ns="legal" components={{ strong, emailLink }} /></li>
-              <li><Trans i18nKey="s11.i12" ns="legal" components={{ strong, aepdLink }} /></li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-white text-base mb-2">{t('s12.title')}</h2>
-            <p className="leading-relaxed">{t('s12.p1')}</p>
-          </section>
-
-          {/* Titular */}
-          <section
-            className="rounded-xl p-4 text-xs space-y-1"
-            style={{ background: 'rgba(198,161,95,0.07)', border: '1px solid rgba(198,161,95,0.2)' }}
-          >
-            <p className="font-semibold text-white mb-1">{t('titular.heading')}</p>
-            <p><Trans i18nKey="titular.line1" ns="legal" components={{ strong }} /></p>
-            <p><span style={{ color: '#8a7c72' }}>{t('titular.nifLabel')}</span> {t('titular.nifValue')}</p>
-            <p><span style={{ color: '#8a7c72' }}>{t('titular.addressLabel')}</span> {t('titular.addressValue')}</p>
-            <p>
-              <span style={{ color: '#8a7c72' }}>{t('titular.contactLabel')}</span>{' '}
-              <a href="mailto:rosa.only.1989@gmail.com" style={{ color: '#c88596' }}>rosa.only.1989@gmail.com</a>
-            </p>
-            <p className="pt-1" style={{ color: '#6b5d54' }}>{t('titular.updated')}</p>
           </section>
 
           <div className="pt-2">

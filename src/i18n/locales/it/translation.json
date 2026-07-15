@@ -60,10 +60,6 @@
       "title": "🔞 Contenuto per Adulti",
       "text": "Questo sito contiene materiale di natura sessuale esplicita destinato esclusivamente a persone maggiori di 18 anni. Procedendo, dichiari sotto la tua responsabilità di essere maggiorenne nel tuo paese di residenza."
     },
-    "ai": {
-      "title": "🤖 Contenuto Sintetico e IA",
-      "text": "Tutto il contenuto visivo è sintetico ed è stato generato o modificato tramite intelligenza artificiale: «Rosa XOXO» è un'identità digitale fittizia. Inoltre, le conversazioni di Telegram possono essere gestite da un agente di intelligenza artificiale, e non necessariamente da una persona reale in tempo reale."
-    },
     "subscription": {
       "title": "📋 Termini di Abbonamento",
       "text": "L'abbonamento mensile si rinnova automaticamente ogni 30 giorni. L'abbonamento annuale si rinnova ogni 365 giorni. Puoi cancellare in qualsiasi momento dal tuo pannello Stripe e non verranno effettuati ulteriori addebiti, ma non è previsto rimborso per il periodo in corso."
@@ -80,7 +76,7 @@
       "title": "📄 Termini Completi",
       "text": "Consulta i <legalLink>termini legali completi</legalLink> prima di continuare."
     },
-    "checkboxLabel": "Confermo di avere più di 18 anni e accetto i <legalLink>termini legali</legalLink>, inclusa la privacy policy (RGPD), il rinnovo automatico, la politica di non rimborso, e che il contenuto è sintetico/generato da IA e le conversazioni possono essere gestite da un agente di intelligenza artificiale.",
+    "checkboxLabel": "Confermo di avere più di 18 anni e accetto i <legalLink>termini legali</legalLink>, inclusa la privacy policy (RGPD), il rinnovo automatico e la politica di non rimborso.",
     "cta": "Continua al pagamento →"
   },
   "success": {
