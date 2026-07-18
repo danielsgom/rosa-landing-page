@@ -3,8 +3,19 @@ import Home from './pages/Home.jsx'
 import Legal from './pages/Legal.jsx'
 import Success from './pages/Success.jsx'
 import Cancel from './pages/Cancel.jsx'
+import Maintenance from './pages/Maintenance.jsx'
+
+const MAINTENANCE_MODE = true
 
 function App() {
+  if (MAINTENANCE_MODE) {
+    return (
+      <Routes>
+        <Route path="*" element={<Maintenance />} />
+      </Routes>
+    )
+  }
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
