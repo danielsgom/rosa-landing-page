@@ -30,19 +30,21 @@ export default function PlanCard({ plan, onSelect, loading }) {
             {t('plans.annual.badge')}
           </span>
           <span
-            className="text-xs font-semibold px-2 py-1 rounded-full"
-            style={{ background: 'rgba(198,161,95,0.15)', color: '#e2c281' }}
+            className="text-xs font-bold px-2 py-1 rounded-full"
+            style={{ background: 'rgba(220,80,80,0.15)', color: '#ff9d9d', border: '1px solid rgba(220,80,80,0.35)' }}
           >
-            💰 {t('plans.annual.savings')}
+            {t('plans.annual.discount')}
           </span>
         </div>
 
         <div className="my-3">
-          <div className="flex items-baseline gap-1">
+          <div className="flex items-baseline gap-2">
             <span className="text-4xl font-black" style={{ color: '#e2c281' }}>30€</span>
+            <span className="text-lg font-semibold line-through" style={{ color: '#6b5d54' }}>50€</span>
             <span className="text-sm" style={{ color: '#8a7c72' }}>/{t('plans.annual.period')}</span>
           </div>
           <p className="text-sm mt-0.5" style={{ color: '#b3a49a' }}>{t('plans.annual.tagline')}</p>
+          <p className="text-xs mt-1" style={{ color: '#e2c281' }}>💰 {t('plans.annual.savings')}</p>
         </div>
 
         <ul className="space-y-2.5 mb-5">
@@ -108,10 +110,10 @@ export default function PlanCard({ plan, onSelect, loading }) {
 
       <button
         className="btn-secondary"
-        onClick={() => onSelect('monthly')}
-        disabled={loading}
+        disabled
+        style={{ opacity: 0.6, cursor: 'not-allowed' }}
       >
-        {loading ? t('common.processing') : `🔥 ${t('plans.monthly.cta')}`}
+        {t('plans.monthly.comingSoon')}
       </button>
     </div>
   )

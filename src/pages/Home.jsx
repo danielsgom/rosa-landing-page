@@ -15,6 +15,8 @@ const HERO_IMAGE   = heroImage
 const AVATAR_IMAGE = avatarImage
 // ─────────────────────────────────────────────────────────────────────────────
 
+const PAYPAL_ANNUAL_URL = 'https://www.paypal.com/ncp/payment/97E4U7MKZS63Q'
+
 export default function Home() {
   const { accepted, accept } = useLegalAcceptance()
   const { t, i18n } = useTranslation()
@@ -51,6 +53,10 @@ export default function Home() {
   }
 
   const startCheckout = async (plan) => {
+    if (plan === 'annual') {
+      window.location.href = PAYPAL_ANNUAL_URL
+      return
+    }
     setLoading(true)
     setError(null)
     try {
